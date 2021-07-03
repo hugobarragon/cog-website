@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cog-website/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/cog-website/static/js/main.96916132.chunk.js",
+    "main.js.map": "/cog-website/static/js/main.96916132.chunk.js.map",
+    "runtime-main.js": "/cog-website/static/js/runtime-main.c1fc2c65.js",
+    "runtime-main.js.map": "/cog-website/static/js/runtime-main.c1fc2c65.js.map",
+    "static/js/2.4b1cd335.chunk.js": "/cog-website/static/js/2.4b1cd335.chunk.js",
+    "static/js/2.4b1cd335.chunk.js.map": "/cog-website/static/js/2.4b1cd335.chunk.js.map",
+    "static/js/3.9d38d745.chunk.js": "/cog-website/static/js/3.9d38d745.chunk.js",
+    "static/js/3.9d38d745.chunk.js.map": "/cog-website/static/js/3.9d38d745.chunk.js.map",
+    "index.html": "/cog-website/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/cog-website/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.4b1cd335.chunk.js.LICENSE.txt": "/cog-website/static/js/2.4b1cd335.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/cog-website/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c1fc2c65.js",
+    "static/js/2.4b1cd335.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.96916132.chunk.js"
+  ]
+}
