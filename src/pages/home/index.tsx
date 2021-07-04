@@ -3,8 +3,8 @@ import homeSliderJPG from "../../images/homeSlider.jpg";
 import homeLaddersJPG from "../../images/homeLadders.jpg";
 import { useEffect } from "react";
 import { useRef } from "react";
-import gsap, { Power1 } from "gsap";
-import { TimelineMax } from "gsap/all";
+import { Power1 } from "gsap";
+import { gsap, TimelineMax } from "gsap/all";
 
 gsap.registerPlugin(TimelineMax);
 
