@@ -1,7 +1,6 @@
 import React from "react";
-import "antd/dist/antd.css";
 import { Layout } from "antd";
-import "./index.css";
+import "./styles/index.less";
 import TopBarHeader from "./components/TopBarHeader";
 import { BrowserRouter } from "react-router-dom";
 import LayoutContentRouter from "./router";

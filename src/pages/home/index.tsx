@@ -6,19 +6,19 @@ import { useRef } from "react";
 import { gsap, Power1 } from "gsap";
 
 function HomePage() {
-  const imageRef = useRef(null);
+  const imageContainerRef = useRef(null);
 
   useEffect(() => {
-    if (imageRef.current) {
-      const img = imageRef.current;
+    if (imageContainerRef.current) {
+      const img = imageContainerRef.current;
       var freewayEaseTween = gsap.timeline({ paused: false });
       // set initial CSS autoAlpha to 0
       // GSAP handles the cross browser vendor prefixes
       freewayEaseTween
-        .set(img, { backgroundSize: "150% 150%" })
-        // animate CSS autoAlpha to 1
-        .to(img, 2, {
-          backgroundSize: "-=100% -=50%",
+        .set(img, { transform: "scale(1.1)" })
+        // animate CSS to tranform 1 smooth
+        .to(img, 5, {
+          transform: "scale(1)",
           autoRound: false,
           ease: Power1.easeOut,
         })
@@ -27,29 +27,23 @@ function HomePage() {
   }, []);
 
   return (
-    <>
-      <div className="home-first">
-        <div style={{ position: "absolute", bottom: 75, left: 25 }}>
-          <h1>
-            <b>Criamos os seus sonhos</b>
-          </h1>
+    <div className="home-page">
+      <div className="first-section">
+        <div className="img-container">
+          <div
+            className="img"
+            ref={imageContainerRef}
+            style={{
+              backgroundImage: `url(${homeLaddersJPG}) `,
+            }}
+          />
         </div>
-        <div
-          className="sim"
-          ref={imageRef}
-          style={{
-            background: `url(${homeLaddersJPG}) `,
-            backgroundRepeat: "no-repeat",
-            // backgroundAttachment: "fixed",
-            backgroundPosition: "center",
-            backgroundSize: " 150% 150%",
-          }}
-        />
+        <div className="banner">Criamos os seus sonhos</div>
       </div>
-      <div className="home-second">
+      <div className="second-section">
         <img alt="home-parque-gif" src={homeSliderJPG} />
       </div>
-    </>
+    </div>
   );
 }
 
