@@ -3,10 +3,7 @@ import homeSliderJPG from "../../images/homeSlider.jpg";
 import homeLaddersJPG from "../../images/homeLadders.jpg";
 import { useEffect } from "react";
 import { useRef } from "react";
-import { Power1 } from "gsap";
-import { gsap, TimelineMax } from "gsap/all";
-
-gsap.registerPlugin(TimelineMax);
+import { gsap, Power1 } from "gsap";
 
 function HomePage() {
   const imageRef = useRef(null);
@@ -14,7 +11,7 @@ function HomePage() {
   useEffect(() => {
     if (imageRef.current) {
       const img = imageRef.current;
-      var freewayEaseTween = new TimelineMax();
+      var freewayEaseTween = gsap.timeline({ paused: false });
       // set initial CSS autoAlpha to 0
       // GSAP handles the cross browser vendor prefixes
       freewayEaseTween
