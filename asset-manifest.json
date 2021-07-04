@@ -1,27 +1,24 @@
 {
   "files": {
-    "main.css": "/cog-website/static/css/main.0b54dbc2.chunk.css",
-    "main.js": "/cog-website/static/js/main.88c17f22.chunk.js",
-    "main.js.map": "/cog-website/static/js/main.88c17f22.chunk.js.map",
-    "runtime-main.js": "/cog-website/static/js/runtime-main.35333a8f.js",
-    "runtime-main.js.map": "/cog-website/static/js/runtime-main.35333a8f.js.map",
-    "static/css/2.ba8a8a05.chunk.css": "/cog-website/static/css/2.ba8a8a05.chunk.css",
-    "static/js/2.602841a9.chunk.js": "/cog-website/static/js/2.602841a9.chunk.js",
-    "static/js/2.602841a9.chunk.js.map": "/cog-website/static/js/2.602841a9.chunk.js.map",
-    "static/js/3.24789ea1.chunk.js": "/cog-website/static/js/3.24789ea1.chunk.js",
-    "static/js/3.24789ea1.chunk.js.map": "/cog-website/static/js/3.24789ea1.chunk.js.map",
+    "main.css": "/cog-website/static/css/main.70f65c91.chunk.css",
+    "main.js": "/cog-website/static/js/main.e6c2678d.chunk.js",
+    "main.js.map": "/cog-website/static/js/main.e6c2678d.chunk.js.map",
+    "runtime-main.js": "/cog-website/static/js/runtime-main.2f169e40.js",
+    "runtime-main.js.map": "/cog-website/static/js/runtime-main.2f169e40.js.map",
+    "static/js/2.5d876ec8.chunk.js": "/cog-website/static/js/2.5d876ec8.chunk.js",
+    "static/js/2.5d876ec8.chunk.js.map": "/cog-website/static/js/2.5d876ec8.chunk.js.map",
+    "static/js/3.90d4aca3.chunk.js": "/cog-website/static/js/3.90d4aca3.chunk.js",
+    "static/js/3.90d4aca3.chunk.js.map": "/cog-website/static/js/3.90d4aca3.chunk.js.map",
     "index.html": "/cog-website/index.html",
-    "static/css/2.ba8a8a05.chunk.css.map": "/cog-website/static/css/2.ba8a8a05.chunk.css.map",
-    "static/css/main.0b54dbc2.chunk.css.map": "/cog-website/static/css/main.0b54dbc2.chunk.css.map",
-    "static/js/2.602841a9.chunk.js.LICENSE.txt": "/cog-website/static/js/2.602841a9.chunk.js.LICENSE.txt",
+    "static/css/main.70f65c91.chunk.css.map": "/cog-website/static/css/main.70f65c91.chunk.css.map",
+    "static/js/2.5d876ec8.chunk.js.LICENSE.txt": "/cog-website/static/js/2.5d876ec8.chunk.js.LICENSE.txt",
     "static/media/homeLadders.f2e88dbe.jpg": "/cog-website/static/media/homeLadders.f2e88dbe.jpg",
     "static/media/homeSlider.6cbf0cdf.jpg": "/cog-website/static/media/homeSlider.6cbf0cdf.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.35333a8f.js",
-    "static/css/2.ba8a8a05.chunk.css",
-    "static/js/2.602841a9.chunk.js",
-    "static/css/main.0b54dbc2.chunk.css",
-    "static/js/main.88c17f22.chunk.js"
+    "static/js/runtime-main.2f169e40.js",
+    "static/js/2.5d876ec8.chunk.js",
+    "static/css/main.70f65c91.chunk.css",
+    "static/js/main.e6c2678d.chunk.js"
   ]
 }
