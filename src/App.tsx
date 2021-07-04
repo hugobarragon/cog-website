@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "antd/dist/antd.css";
+import { Layout } from "antd";
+import "./index.css";
+import TopBarHeader from "./components/TopBarHeader";
+import { BrowserRouter } from "react-router-dom";
+import LayoutContentRouter from "./router";
+
+const { Content, Footer } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter basename="/cog-website">
+      <Layout className="layout">
+        <TopBarHeader />
+        <Content>
+          <div className="site-layout-content">
+            <LayoutContentRouter />
+          </div>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>
+          Created by Hugo Barragon
+        </Footer>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
