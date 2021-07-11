@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import { Layout, Menu, Row, Col, Dropdown, Grid } from "antd";
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
-import { useMount } from "react-use";
+import { useMount, useWindowScroll } from "react-use";
 import { gsap, Power2 } from "gsap";
-import ScrollTriggerPlugin from "gsap/ScrollTrigger";
 import { HomeOutlined, AuditOutlined } from "@ant-design/icons";
-
-gsap.registerPlugin(ScrollTriggerPlugin);
 
 const { Header } = Layout;
 const { useBreakpoint } = Grid;
@@ -35,8 +32,10 @@ const menuItems = [
 
 function TopBarHeader() {
   const screens = useBreakpoint();
-  const [activeTopbarScroll, setAciveTopBarScroll] = useState(false);
   const [selectedMenuKey, setSelectedMenuKey] = useState("home");
+  const { y } = useWindowScroll();
+
+  const scrolling = y > 0;
 
   useMount(() => {
     const gsapTimeline = gsap.timeline({});
@@ -52,38 +51,14 @@ function TopBarHeader() {
       },
       0,
     );
-
-    // topbar fill
-    gsapTimeline.to(
-      ".site-header",
-      {
-        backgroundColor: "white",
-        boxShadow: "black 0px -12px 18px 12px",
-        ease: Power2.easeInOut,
-        scrollTrigger: {
-          trigger: ".site-header",
-          start: "top -50",
-          end: "100%",
-          scrub: true,
-        },
-        onStart: () => {
-          setAciveTopBarScroll(true);
-        },
-        onReverseComplete: () => {
-          setAciveTopBarScroll(false);
-        },
-      },
-      0,
-    );
   });
 
   return (
-    <Header className="site-header">
+    <Header
+      className={`site-header ${scrolling ? "site-header-scrolling" : ""}`}
+    >
       <Row justify="space-between">
-        <Col
-          span={4}
-          className={`logo ${activeTopbarScroll ? "text-to-black" : ""}`}
-        >
+        <Col span={4} className={`logo ${scrolling ? "text-to-black" : ""}`}>
           <Link to="/home">COGarquitectos</Link>
         </Col>
         {screens.sm ? (
@@ -99,7 +74,7 @@ function TopBarHeader() {
                 <Menu.Item
                   key={data.key}
                   className={
-                    activeTopbarScroll && selectedMenuKey !== data.key
+                    scrolling && selectedMenuKey !== data.key
                       ? "text-to-black"
                       : ""
                   }
@@ -136,9 +111,7 @@ function TopBarHeader() {
               }
               placement="bottomRight"
             >
-              <MenuOutlined
-                className={activeTopbarScroll ? "text-to-black" : ""}
-              />
+              <MenuOutlined className={scrolling ? "text-to-black" : ""} />
             </Dropdown>
           </Col>
         )}
